@@ -7,7 +7,7 @@ def init_log_config(filename, when='midnight', interval=1, backup_count=7):
     :param filename: 日志文件名
     :param when: 设定日志切分的间隔时间单位
     :param interval: 间隔时间单位的个数，指等待多少个 when 后继续进行日志记录
-    :param backup_count: 保留日志文件的个数
+    :param backup_count: 保s留日志文件的个数
     :return:
     """
     # 1. 创建日志器对象
