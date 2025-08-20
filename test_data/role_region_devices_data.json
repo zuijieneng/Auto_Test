@@ -1,0 +1,18 @@
+[
+  {
+    "username": "user1",
+    "password": "pwd123",
+    "expected_devices": [
+      {"device_id": "dev_001", "name": "设备04", "region_code": "2999019"},
+      {"device_id": "dev_002", "name": "设备03", "region_code": "2890890"}
+    ]
+  },
+  {
+    "username": "user2",
+    "password": "pwd456",
+    "expected_devices": [
+      {"device_id": "dev_003", "name": "设备02", "region_code": "1090212"}
+      {"device_id": "dev_003", "name": "设备01", "region_code": "1080321"}
+    ]
+  }
+]

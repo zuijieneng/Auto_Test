@@ -1,0 +1,42 @@
+[
+  {
+    "username": "张三",
+    "password": "abcdefg.",
+    "code": "OK",
+    "comment": "账号密码正确！"
+  },
+  {
+    "username": "张三2",
+    "password": "abcdefg2.",
+    "code": "OK",
+    "comment": "账号为空！"
+  },
+  {
+    "username": "张三3",
+    "password": "abcdefg3.",
+    "code": "OK",
+    "comment": "账号未注册！"
+  },
+  {
+    "username": "张三4",
+    "password": "abcdefg4.",
+    "code": "OK",
+    "comment": "账号纯字母！"
+  },
+  {
+    "username": "张三5",
+    "password": "abcdefg6.",
+    "code": "OK",
+    "comment": "账号纯数字！"
+  },
+  {
+    "username": "张三6",
+    "password": "abcdefg5.",
+    "code": "OK"
+  },
+  {
+    "username": "张三7",
+    "password": "abcdefg9.",
+    "code": "NO"
+  }
+]
