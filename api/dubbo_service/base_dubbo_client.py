@@ -1,12 +1,14 @@
 from dubboclient import DubboClient
 
+from Common.handle_data.config_parse import ConfigParse
+
 
 class BaseDubboClient(object):
     dubboclient = None
-    service_name = "DeviceService"
+    service_name = None
 
     def __init__(self):
-        self.dubboclient = DubboClient("192.168.127.12", 8080)
-
-
-
+        config = ConfigParse()
+        host = config.get_value("host", "host")
+        port = config.get_value("host", "port")
+        self.dubboclient = DubboClient(host, port)

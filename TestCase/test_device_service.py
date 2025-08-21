@@ -3,9 +3,9 @@ import unittest
 
 from api.dubbo_service.device_service import DeviceService
 from api.gdc_devices_api import GdcDevicesApi
-from config.logger_config import init_log_config
-from common.public.token_util import get_header_by_user
-from config import BASE_LOG_DIR
+from Configs.logger_config import init_log_config
+from Common.requests_util.token_util import get_header_by_user
+from Configs import BASE_LOG_DIR
 
 
 class TestDeviceService(unittest.TestCase):
@@ -43,4 +43,6 @@ class TestDeviceService(unittest.TestCase):
     @classmethod
     def get_device_list(slef, token):
         devices_page = GdcDevicesApi.get_device_pages(token)
+
+
 

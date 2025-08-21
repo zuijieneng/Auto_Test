@@ -1,5 +1,7 @@
 import logging.handlers
 import logging
+from Configs.file_path_config import get_file_path
+
 
 def init_log_config(filename, when='midnight', interval=1, backup_count=7):
     """
@@ -7,7 +9,7 @@ def init_log_config(filename, when='midnight', interval=1, backup_count=7):
     :param filename: 日志文件名
     :param when: 设定日志切分的间隔时间单位
     :param interval: 间隔时间单位的个数，指等待多少个 when 后继续进行日志记录
-    :param backup_count: 保s留日志文件的个数
+    :param backup_count: 保留日志文件的个数
     :return:
     """
     # 1. 创建日志器对象
@@ -24,8 +26,10 @@ def init_log_config(filename, when='midnight', interval=1, backup_count=7):
     # 3. 创建处理器对象
     # 控制台对象
     st = logging.StreamHandler()
+    # 日志地址
+    path = get_file_path("logs") / filename
     # 日志文件对象
-    fh = logging.handlers.TimedRotatingFileHandler(filename,
+    fh = logging.handlers.TimedRotatingFileHandler(filename=path,
                                                    when=when,
                                                    interval=interval,
                                                    backupCount=backup_count,
@@ -43,7 +47,7 @@ def init_log_config(filename, when='midnight', interval=1, backup_count=7):
     logger.addHandler(st)
     logger.addHandler(fh)
 
-#
+
 # if __name__ == '__main__':
 #     # 初始化日志:这里必须用BASE_DIR，相对路径识别不到log文件夹
 #     init_log_config(Path(__file__).parent/'logger_config.log')

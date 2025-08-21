@@ -1,6 +1,6 @@
 import unittest
 from htmltestreport import HTMLTestReport
-from scripts.test_login import TestLogin
+from TestCase.test_login import TestLogin
 
 # 创建套件实例
 suite = unittest.TestSuite()
